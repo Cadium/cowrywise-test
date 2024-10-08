@@ -1,0 +1,127 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 8px;
+  width: 70%;
+  max-width: 800px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 70vh;
+}
+
+.modal-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.author {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+}
+
+.location {
+  font-size: 1rem;
+  color: #666;
+  margin: 0 0 5px 0;
+}
+
+.camera-info {
+  font-size: 0.9rem;
+  color: #888;
+  margin: 0 0 15px 0;
+  font-style: italic;
+}
+
+.photo-actions {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: auto;
+}
+
+.action-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-right: 15px;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+  color: #999;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.like-button {
+  &:hover,
+  .liked {
+    color: #e74c3c;
+  }
+}
+
+.download-button {
+  &:hover {
+    color: #3498db;
+  }
+}
+
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 1;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+.modal-enter-active,
+.modal-leave-active {
+  transition:
+    opacity 0.3s,
+    transform 0.3s;
+}
+
+.modal-enter-from,
+.modal-leave-to {
+  opacity: 0;
+  transform: scale(0.9);
+}
